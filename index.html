@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primer Pre-entrega Javascript</title>
     <!-- JS -->
-    <script defer src="./js/script.js"></script>
+    <!-- <script defer src="./js/script.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <head>
-        <h1>Primer Pre-entrega Javascript</h1>
-        <h2>Plataforma de Universidad/Colegio </h2>
-        <p>Deseo llevar a cabo una plataforma escolar donde se pueda tener el seguimiento de cada alumno en particular y ademas que desde alli se puedar cargar las notas.
-            Tendria varias funcionalidades tanto para el alumno como para los profesores y tutores o preceptores. Se podran cargar notas, subir apuntes de la clase, programar clases virtuales, consultas al profesor por la plataforma, etc.
-        </p>
-        <p>Este proyecto tambien puede aplicarse en una universidad realizando las correspondientes adaptaciones para que funcione correctamente. Hay algunas funcionalidades que todavia no puedo llevar a cabo pero seguro con el pasar de las clases las podre realizar.</p>
-    </head>
+    <header class="d-flex flex-row align-items-center justify-content-between py-3 px-2 bg-dark bg-opacity-50">
+        <h1 class="fs-2 fw-bold text-light">Colegio Lorenzo Massa</h1>
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link text-light fw-medium fs-6" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link text-light fw-medium fs-6" href="">Acerca de Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link text-light fw-medium fs-6" href="">Iniciar Sesión</a></li>
+        </ul>
+    </header>
+    <main class="container-fluid">
+        <section class="pt-5 mt-5">
+            <h2 class="fs-1 text-white">Bienvenido, qué desea hacer?</h2>
+            <section class="d-flex flex-row justify-content-start">
+                <a class="btn btn-primary me-3" href="html/login.html">Iniciar Sesión</a>
+                <a class="btn btn-outline-light me-3" href="html/signup.html">Registrarme</a>
+                <a class="btn btn-success me-2" href="html/compra.html">Realizar una compra</a>
+            </section>
+            
+        </section>
+    </main>
 </body>
 </html>
