@@ -1,8 +1,13 @@
 let cartProducts = JSON.parse(localStorage.getItem("cartProducts"))
 console.log(cartProducts)
 const cartContainer = document.getElementById("cart-container");
+const clearButton = document.getElementById("clearCart");
+
+
+
 
 renderCart(cartProducts);
+clear();
 
 function renderCart(cartProducts) {
     for (const producto of cartProducts){
@@ -13,4 +18,12 @@ function renderCart(cartProducts) {
         article.style.width = "35%"
         cartContainer.appendChild(article);
     };
+}
+
+function clear() {
+    clearButton.onclick = () =>{
+        localStorage.clear();
+        cartContainer.innerHTML = ""
+    }
+    
 }
