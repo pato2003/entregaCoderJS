@@ -53,10 +53,9 @@ function renderProductos(productsList) {
     addToCart();
 }
 
-renderProductos(articulos)
+
 
 let cart = [];
-
 
 function addToCart() {
     let addButtons = document.querySelectorAll(".productoAgregar");
@@ -65,8 +64,12 @@ function addToCart() {
             let productID = button.id;
             let selectedProduct = articulos.find(articulo => articulo.id == productID);
             cart.push(selectedProduct);
-
+            
             localStorage.setItem("cartProducts", JSON.stringify(cart))
         }
     })
 }
+
+
+renderProductos(articulos)
+
