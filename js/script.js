@@ -37,15 +37,36 @@ const articulos =[
 
 const cardsContainer = document.getElementById("cards-container");
 
-for (const articulo of articulos) {
-    const article = document.createElement("article");
-    article.className = "card m-4";
-    article.innerHTML = `<img src=${articulo.img} class="card-img-top" alt="...">
-                        <section class="card-body">
-                            <h4 class="card-title">${articulo.nombre}     -    $${articulo.precio}</h4>
-                            <p class="card-text">${articulo.descripcion}</p>
-                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                        </section>`;
-    article.style.width = "35%"
-    cardsContainer.appendChild(article);
+function renderProductos(productsList) {
+    for (const articulo of productsList) {
+        const article = document.createElement("article");
+        article.className = "card m-4";
+        article.innerHTML = `<img src=${articulo.img} class="card-img-top" alt="...">
+                            <section class="card-body">
+                                <h4 class="card-title">${articulo.nombre}     -    $${articulo.precio}</h4>
+                                <p class="card-text">${articulo.descripcion}</p>
+                                <button class="btn btn-primary productoAgregar" id="${articulo.id}">Agregar al carrito</button>
+                            </section>`;
+        article.style.width = "35%"
+        cardsContainer.appendChild(article);
+    }
+    addToCart();
+}
+
+renderProductos(articulos)
+
+let cart = [];
+
+
+function addToCart() {
+    let addButtons = document.querySelectorAll(".productoAgregar");
+    addButtons.forEach(button =>{
+        button.onclick = () => {
+            let productID = button.id;
+            let selectedProduct = articulos.find(articulo => articulo.id == productID);
+            cart.push(selectedProduct);
+
+            localStorage.setItem("cartProducts", JSON.stringify(cart))
+        }
+    })
 }
