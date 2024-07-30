@@ -2,6 +2,7 @@ let cartProducts = JSON.parse(localStorage.getItem("cartProducts"))
 console.log(cartProducts)
 const cartContainer = document.getElementById("cart-container");
 const clearButton = document.getElementById("clearCart");
+const totalContainer = document.getElementById("totalCompra");
 
 
 
@@ -21,12 +22,19 @@ function renderCart(cartProducts) {
         article.style.width = "35%"
         cartContainer.appendChild(article);
     };
+    calculoTotal();
 }
 
 function clear() {
     clearButton.onclick = () =>{
         localStorage.clear();
-        cartContainer.innerHTML = ""
+        cartContainer.innerHTML = "";
+        totalContainer.innerText = "0"
     }
     
+}
+
+function calculoTotal() {
+        let total = cartProducts.reduce((acumulador,producto) => acumulador + (producto.cantidad * producto.precio), 0);
+        totalContainer.innerText = `${total}`        
 }
