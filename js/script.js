@@ -6,7 +6,7 @@ const articulos =[
         precio: 1500,
         descripcion: "Camisa de la institucion para el horario de clases en aula",
         img: "img/remera.png",
-        stock: 100
+        cantidad: 1
     },
     {
         id: 1,
@@ -14,7 +14,7 @@ const articulos =[
         precio: 2000,
         descripcion: "Pantalón de la institucion para el horario de clases en aula",
         img: "img/pantalon.jpeg",
-        stock: 100
+        cantidad: 1
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const articulos =[
         precio: 1700,
         descripcion: "Remera de la institucion para el horario de clases de la materia Educación Física",
         img: "img/remeradeportiva.jpeg",
-        stock: 100
+        cantidad: 1
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const articulos =[
         precio: 1200,
         descripcion: "Short de la institucion para el horario de clases de la materia Educación Física",
         img: "img/shortdeportivo.jpeg",
-        stock: 100
+        cantidad: 1
     },
 ];
 
@@ -60,10 +60,24 @@ let cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
 function addToCart() {
     let addButtons = document.querySelectorAll(".productoAgregar");
     addButtons.forEach(button =>{
-        button.onclick = () => {
-            let productID = button.id;
+        button.onclick = (e) => {
+            let productID = e.currentTarget.id;
             let selectedProduct = articulos.find(articulo => articulo.id == productID);
-            cart.push(selectedProduct);
+            if (cart.some((producto) => producto.id == productID)) {
+                let listaProductos = cart.map((producto) =>{
+                    if(producto.id==selectedProduct.id){
+                        producto.cantidad = (producto.cantidad + 1);
+                        return producto;
+                    }
+                    else{
+                        return producto
+                    }
+                })
+                cart = listaProductos;
+            }
+            else{
+                cart.push(selectedProduct);
+            }
         
             localStorage.setItem("cartProducts", JSON.stringify(cart))
         }

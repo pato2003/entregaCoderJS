@@ -14,7 +14,10 @@ function renderCart(cartProducts) {
         const article = document.createElement("article");
         article.className = "m-2 border border-secondary-subtle w-100 d-flex flex-row align-items-center";
         article.innerHTML = `<img src=${"../"+producto.img} alt="..." class ="m-1" style = "height: 7rem">
-                             <h4 class="fs-3 ms-3">${producto.nombre}     -    $${producto.precio}</h4>`;
+                            <section class = "ms-3">
+                                <h4 class="fs-3">${producto.nombre}     -    $${producto.precio}</h4>
+                                <p> Cantidad: ${producto.cantidad}</p>
+                            </section>`;
         article.style.width = "35%"
         cartContainer.appendChild(article);
     };
