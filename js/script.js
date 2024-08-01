@@ -6,7 +6,7 @@ const articulos =[
         precio: 1500,
         descripcion: "Camisa de la institucion para el horario de clases en aula",
         img: "img/remera.png",
-        cantidad: 1
+        cantidad: 0
     },
     {
         id: 1,
@@ -14,7 +14,7 @@ const articulos =[
         precio: 2000,
         descripcion: "Pantalón de la institucion para el horario de clases en aula",
         img: "img/pantalon.jpeg",
-        cantidad: 1
+        cantidad: 0
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const articulos =[
         precio: 1700,
         descripcion: "Remera de la institucion para el horario de clases de la materia Educación Física",
         img: "img/remeradeportiva.jpeg",
-        cantidad: 1
+        cantidad: 0
     },
     {
         id: 3,
@@ -30,58 +30,92 @@ const articulos =[
         precio: 1200,
         descripcion: "Short de la institucion para el horario de clases de la materia Educación Física",
         img: "img/shortdeportivo.jpeg",
-        cantidad: 1
+        cantidad: 0
     },
 ];
 
 
 const cardsContainer = document.getElementById("cards-container");
+let cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
+
 
 function renderProductos(productsList) {
-    for (const articulo of productsList) {
-        const article = document.createElement("article");
-        article.className = "card m-4";
-        article.innerHTML = `<img src=${articulo.img} class="card-img-top" alt="...">
-                            <section class="card-body">
-                                <h4 class="card-title">${articulo.nombre}     -    $${articulo.precio}</h4>
-                                <p class="card-text">${articulo.descripcion}</p>
-                                <button class="btn btn-primary productoAgregar" id="${articulo.id}">Agregar al carrito</button>
-                            </section>`;
-        article.style.width = "35%"
-        cardsContainer.appendChild(article);
+    cardsContainer.innerHTML=""
+    if (productsList) {
+        for (const articulo of productsList) {
+            const article = document.createElement("article");
+            article.className = "card m-4";
+            article.innerHTML = `<img src=${articulo.img} class="card-img-top" alt="...">
+                                <section class="card-body">
+                                    <h4 class="card-title">${articulo.nombre}     -    $${articulo.precio}</h4>
+                                    <p class="card-text">${articulo.descripcion}</p>
+                                    <article class = "d-flex flex-row">
+                                        <button class="btn btn-primary productoAgregar"  id="${articulo.id}">Agregar al carrito</button>
+                                        <section class="ms-auto flex-row align-items-center btn-container" id="btnContainer${articulo.id}">
+                                            <button class ="btn btn-outline-secondary fs-5 fw-bold btnResta" id="resta${articulo.id}" style = "width: 2.5rem;">- </button>
+                                            <p class ="px-3 my-auto cant-container" id = "cantContainer${articulo.id}"></p>
+                                            <button class ="btn btn-success fs-5 fw-bold btnSuma" id="suma${articulo.id}" style = "width: 2.5rem;">+ </button>
+                                        </section>
+                                    </article>
+                                </section>`;
+            article.style.width = "35%"
+            cardsContainer.appendChild(article);
+        }        
     }
+    refreshCant(cart);
     addToCart();
+    
 }
 
 
 
-let cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
+
 
 function addToCart() {
     let addButtons = document.querySelectorAll(".productoAgregar");
     addButtons.forEach(button =>{
         button.onclick = (e) => {
             let productID = e.currentTarget.id;
+            let btnContainer = e.currentTarget.parentElement.querySelector(".btn-container")
+            let cantContainer = e.currentTarget.parentElement.querySelector(".cant-container")
+            
             let selectedProduct = articulos.find(articulo => articulo.id == productID);
-            if (cart.some((producto) => producto.id == productID)) {
+            if (cart.length > 0 && cart.some((producto) => producto.id == productID)) {
                 let listaProductos = cart.map((producto) =>{
                     if(producto.id==selectedProduct.id){
-                        producto.cantidad = (producto.cantidad + 1);
+                        producto.cantidad++;
                         return producto;
                     }
                     else{
+                        producto.cantidad++;
                         return producto
                     }
                 })
                 cart = listaProductos;
             }
             else{
+                selectedProduct.cantidad++;
                 cart.push(selectedProduct);
             }
-        
+            refreshCant(cart);
             localStorage.setItem("cartProducts", JSON.stringify(cart))
         }
     })
+    
+}
+
+function refreshCant(cart) {
+    cart.forEach(producto => {
+        const contenedorCantidad = document.getElementById(`cantContainer${producto.id}`);
+        const contenedorBotones = document.getElementById(`btnContainer${producto.id}`);
+        if (producto.cantidad == 0) {
+            contenedorBotones.style.display = "none";
+        }
+        else{
+            contenedorBotones.style.display = "flex";
+            contenedorCantidad.innerText = `${producto.cantidad}`
+        }
+    });
 }
 
 
