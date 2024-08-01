@@ -50,7 +50,7 @@ function renderProductos(productsList) {
                                     <h4 class="card-title">${articulo.nombre}     -    $${articulo.precio}</h4>
                                     <p class="card-text">${articulo.descripcion}</p>
                                     <article class = "d-flex flex-row">
-                                        <button class="btn btn-primary productoAgregar"  id="${articulo.id}">Agregar al carrito</button>
+                                        <button class="btn btn-primary fs-5 productoAgregar"  id="${articulo.id}">Agregar al carrito</button>
                                         <section class="ms-auto flex-row align-items-center btn-container" id="btnContainer${articulo.id}">
                                             <button class ="btn btn-outline-secondary fs-5 fw-bold btnResta" id="resta${articulo.id}" style = "width: 2.5rem;">- </button>
                                             <p class ="px-3 my-auto cant-container" id = "cantContainer${articulo.id}"></p>
@@ -73,12 +73,12 @@ function renderProductos(productsList) {
 
 function addToCart() {
     let addButtons = document.querySelectorAll(".productoAgregar");
+    let btnSuma = document.querySelectorAll(".btnSuma");
+    let btnResta = document.querySelectorAll(".btnResta");
+
     addButtons.forEach(button =>{
         button.onclick = (e) => {
             let productID = e.currentTarget.id;
-            let btnContainer = e.currentTarget.parentElement.querySelector(".btn-container")
-            let cantContainer = e.currentTarget.parentElement.querySelector(".cant-container")
-            
             let selectedProduct = articulos.find(articulo => articulo.id == productID);
             if (cart.length > 0 && cart.some((producto) => producto.id == productID)) {
                 let listaProductos = cart.map((producto) =>{
@@ -101,6 +101,32 @@ function addToCart() {
             localStorage.setItem("cartProducts", JSON.stringify(cart))
         }
     })
+
+    btnSuma.forEach(boton =>{
+        boton.onclick = (e) =>{
+            let elementID = e.currentTarget.id;
+            cart.forEach(producto => {
+                if (elementID.includes(`${producto.id}`)) {
+                    producto.cantidad++;
+                }
+            });
+            refreshCant(cart)
+            localStorage.setItem("cartProducts", JSON.stringify(cart))
+        }
+    })
+
+    btnResta.forEach(boton =>{
+        boton.onclick = (e) =>{
+            let elementID = e.currentTarget.id;
+            cart.forEach(producto => {
+                if (elementID.includes(`${producto.id}`)) {
+                    producto.cantidad--;
+                }
+            });
+            refreshCant(cart)
+            localStorage.setItem("cartProducts", JSON.stringify(cart))
+        }
+    })
     
 }
 
@@ -118,6 +144,8 @@ function refreshCant(cart) {
     });
 }
 
+
+// INICIO
 
 renderProductos(articulos)
 

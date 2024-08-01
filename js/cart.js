@@ -59,7 +59,6 @@ function btnFunciones() {
         boton.onclick = (e) =>{
             let productID = parseInt(e.currentTarget.parentElement.id);
             cartProducts = cartProducts.filter((producto) => producto.id != productID)
-            console.log(cartProducts)
             localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
             renderCart(cartProducts)
         }
@@ -74,7 +73,6 @@ function btnFunciones() {
                     producto.cantidad++;
                 }
             });
-            console.log(cartProducts)
             localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
             renderCart(cartProducts)
         }
@@ -90,7 +88,6 @@ function btnFunciones() {
                 }
             });
             cartProducts = cartProducts.filter((producto) => producto.cantidad > 0)
-            console.log(cartProducts)
             localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
             renderCart(cartProducts)
         }
