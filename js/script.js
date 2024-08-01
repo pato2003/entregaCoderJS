@@ -50,11 +50,11 @@ function renderProductos(productsList) {
                                     <h4 class="card-title">${articulo.nombre}     -    $${articulo.precio}</h4>
                                     <p class="card-text">${articulo.descripcion}</p>
                                     <article class = "d-flex flex-row">
-                                        <button class="btn btn-primary fs-5 productoAgregar"  id="${articulo.id}">Agregar al carrito</button>
+                                        <button class="btn btn-primary productoAgregar"  id="${articulo.id}">Agregar al carrito</button>
                                         <section class="ms-auto flex-row align-items-center btn-container" id="btnContainer${articulo.id}">
-                                            <button class ="btn btn-outline-secondary fs-5 fw-bold btnResta" id="resta${articulo.id}" style = "width: 2.5rem;">- </button>
+                                            <button class ="btn btn-outline-secondary fw-bold btnResta" id="resta${articulo.id}" style = "width: 2.5rem;">- </button>
                                             <p class ="px-3 my-auto cant-container" id = "cantContainer${articulo.id}"></p>
-                                            <button class ="btn btn-success fs-5 fw-bold btnSuma" id="suma${articulo.id}" style = "width: 2.5rem;">+ </button>
+                                            <button class ="btn btn-success fw-bold btnSuma" id="suma${articulo.id}" style = "width: 2.5rem;">+ </button>
                                         </section>
                                     </article>
                                 </section>`;
