@@ -8,3 +8,21 @@ body{
 .btn-container{
     display: none;
 }
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-body{
+    position: relative;
+}
+
+.card-price{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem;
+    top: -2rem;
+    left: 0.5rem;
+    border-radius: 0.4rem;
+    color: rgb(96, 96, 96);
+}
