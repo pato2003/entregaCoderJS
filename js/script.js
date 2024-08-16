@@ -9,17 +9,19 @@ function renderProductos(productsListSource) {
         .then(data => {
             data.forEach(articulo => {
                 const article = document.createElement("article");
-                article.className = "card m-3";
-                article.innerHTML = `<img src=${articulo.img} class="card-img-top" alt="...">
-                                    <section class="card-body d-flex flex-column">
+                article.className = "tarjeta m-3";
+                article.innerHTML = `<figure>
+                                        <img src=${articulo.img} alt="...">
+                                    </figure>
+                                    <section class="tarjeta-cuerpo d-flex flex-column">
                                         <p class="card-price">$${articulo.precio}</p>
                                         <h4 class="card-title">${articulo.nombre}</h4>
-                                        <article class = "mt-auto d-flex flex-row">
-                                            <button class="btn btn-primary productoAgregar"  id="${articulo.id}">Agregar al carrito</button>
+                                        <article class = "mt-2 d-flex flex-row">
+                                            <button class="btn btn-primary rounded-pill productoAgregar"  id="${articulo.id}">Agregar al carrito</button>
                                             <section class="ms-auto flex-row align-items-center btn-container" id="btnContainer${articulo.id}">
-                                                <button class ="btn p-1 btn-outline-secondary fw-bold btnResta" id="resta${articulo.id}" style = "width: 2rem;">- </button>
+                                                <button class ="btn p-1 rounded-pill btn-outline-secondary fw-bold btnResta" id="resta${articulo.id}" style = "width: 2rem;">- </button>
                                                 <p class ="px-2 my-auto cant-container" id = "cantContainer${articulo.id}"></p>
-                                                <button class ="btn p-1 btn-success fw-bold btnSuma" id="suma${articulo.id}" style = "width: 2rem;">+ </button>
+                                                <button class ="btn p-1 btn-success rounded-pill fw-bold btnSuma" id="suma${articulo.id}" style = "width: 2rem;">+ </button>
                                             </section>
                                         </article>
                                     </section>`;

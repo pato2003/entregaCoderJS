@@ -5,16 +5,24 @@ body{
     background-size: cover;
 }
 
+img{
+    width: 100%;
+}
+
 .btn-container{
     display: none;
 }
 
-.card:hover{
-    transform: scale(1.1);
+.tarjeta img:hover{
+    transform: scale(1.2);
 }
 
-.card-body{
+.tarjeta-cuerpo{
     position: relative;
+    padding: 0.8rem;
+    padding-bottom: 1.22rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .card-price{
@@ -25,4 +33,14 @@ body{
     left: 0.5rem;
     border-radius: 0.4rem;
     color: rgb(96, 96, 96);
+}
+
+.tarjeta{
+    border-radius: 2rem;
+    box-shadow:10px 10px 60px rgb(177, 177, 177);
+    overflow: hidden;
+}
+
+.tarjeta figure{
+    overflow: hidden;
 }
