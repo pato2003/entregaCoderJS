@@ -6,25 +6,45 @@
     <title>Primer Pre-entrega Javascript</title>
     <!-- JS -->
     <script defer src="./js/script.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
 </head>
 <body>
-    <header class="d-flex flex-row align-items-center justify-content-between py-3 px-2 bg-dark bg-opacity-50">
-        <h1 class="fs-2 fw-bold text-light">Tienda Colegio Lorenzo Massa</h1>
+    <header>
+        <h1><a href="#">Tienda Colegio Lorenzo Massa</a></h1>
         <nav>
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-light fw-medium fs-6" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-light fw-medium fs-6" href="./html/cart.html">Carrito</a></li>
+                <li class="nav-item"><a href="#"><i class="bi bi-house-fill"></i> Inicio</a></li>
+                <li class="nav-item"><a href="./html/cart.html"><i class="bi bi-cart-fill"></i> Carrito</a></li>
             </ul>            
         </nav>
     </header>
-    <main class="container-fluid">
-        <section class="p-5 mt-5 text-bg-light col-10 mx-auto">
-            <h2 class="fs-1 text-center">Bienvenido, qué desea comprar?</h2>
-            <section class="d-flex flex-wrap justify-content-evenly" id="cards-container">
-    
-            </section>
+    <main class="contenedor-tarjetas">
+        <section class="contenedor-categoria"  id="categoriaTodas">
+            <a href="./html/market.html" id="catTodas"><img src="./img/portada-todas.jpeg" alt=""></a>
+            <article class="cuerpo-tarjeta">
+                <h2 class="tarjeta-titulo">Todos los Productos</h2>
+            </article>
+        </section>
+        <section class="contenedor-categoria"  id="categoriaRemeras">
+            <a href="./html/market.html" id="catRemeras"><img src="./img/remeras/portada-remeras.jpg" alt=""></a>
+            <article class="cuerpo-tarjeta">
+                <h2 class="tarjeta-titulo">Remeras</h2>
+            </article>
+        </section>
+        <section class="contenedor-categoria"  id="categoriaCamisas">
+            <a href="./html/market.html" id="catCamisas"><img src="./img/camisas/portada-camisas.jpg" alt=""></a>
+            <article class="cuerpo-tarjeta">
+                <h2 class="tarjeta-titulo">Camisas</h2>
+            </article>
+        </section>
+        <section class="contenedor-categoria"  id="categoriaPantalones">
+            <a href="./html/market.html" id="catJeans"><img src="./img/jeans/portada-jeans.jpg" alt=""></a>
+            <article class="cuerpo-tarjeta">
+                <h2 class="tarjeta-titulo">Jeans</h2>
+            </article>
         </section>
     </main>
     <footer>

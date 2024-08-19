@@ -1,12 +1,44 @@
 body{
-    background-image: url('../img/lorenzo-massa-patio.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 240, 240);
 }
 
 img{
     width: 100%;
+}
+
+header{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    padding-right: 3rem;
+    background-color: rgb(99, 164, 255);
+    top: 0;
+    z-index: 1;
+    
+}
+header a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+nav ul li a:hover{
+    color: rgb(63, 63, 63);
+}
+
+nav ul li{
+    margin-left: 2.5rem;
 }
 
 .btn-container{
@@ -43,4 +75,48 @@ img{
 
 .tarjeta figure{
     overflow: hidden;
+}
+
+
+.contenedor-tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 81vw;
+    margin: 0 auto;
+}
+
+.contenedor-categoria{
+    width: 25vw;
+    margin: 1.5rem 1vw;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(19, 19, 19);
+}
+
+
+.contenedor-categoria:hover img{
+    mask-image: linear-gradient(
+        rgb(255, 255, 255) 50%, 
+        transparent
+    );
+}
+
+.contenedor-categoria img{
+    height: 100%;
+    mask-image: linear-gradient(
+        rgb(255, 255, 255) 50%, 
+        transparent
+    );
+}
+
+.contenedor-tarjetas #categoriaTodas{
+    width: 81vw;
+}
+
+.cuerpo-tarjeta .tarjeta-titulo{
+    position: absolute;
+    left: 1rem;
+    bottom: 1.5rem;
+    color: rgb(255, 255, 255);
 }

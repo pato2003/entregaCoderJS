@@ -114,5 +114,5 @@ function refreshCant(cart) {
 
 // INICIO
 
-renderProductos("./db/data-base.json")
+renderProductos("../db/data-base.json")
 

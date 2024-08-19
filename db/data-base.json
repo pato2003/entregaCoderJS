@@ -3,7 +3,7 @@
         "id": 0,
         "nombre": "Remera ALBANY NEW EAGLES",
         "precio": 1500,
-        "img": "img/remeras/remera1.jpg",
+        "img": "../img/remeras/remera1.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -11,7 +11,7 @@
         "id": 1,
         "nombre": "Remera ALBANY NEW EAGLES",
         "precio": 1500,
-        "img": "img/remeras/remera2.jpg",
+        "img": "../img/remeras/remera2.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -19,7 +19,7 @@
         "id": 2,
         "nombre": "Remera ALBANY NEW EAGLES",
         "precio": 1500,
-        "img": "img/remeras/remera3.jpg",
+        "img": "../img/remeras/remera3.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -27,7 +27,7 @@
         "id": 3,
         "nombre": "Remera FOYOP",
         "precio": 1500,
-        "img": "img/remeras/remera4.png",
+        "img": "../img/remeras/remera4.png",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -35,7 +35,7 @@
         "id": 4,
         "nombre": "Remera FOYOP",
         "precio": 1500,
-        "img": "img/remeras/remera5.JPG",
+        "img": "../img/remeras/remera5.JPG",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -43,7 +43,7 @@
         "id": 5,
         "nombre": "Remera FOYOP",
         "precio": 1500,
-        "img": "img/remeras/remera6.jpg",
+        "img": "../img/remeras/remera6.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -51,7 +51,7 @@
         "id": 6,
         "nombre": "Remera FOYOP",
         "precio": 1500,
-        "img": "img/remeras/remera7.jpg",
+        "img": "../img/remeras/remera7.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -59,7 +59,7 @@
         "id": 7,
         "nombre": "Remera IT'S EASY AS",
         "precio": 1500,
-        "img": "img/remeras/remera8.jpg",
+        "img": "../img/remeras/remera8.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -67,7 +67,7 @@
         "id": 8,
         "nombre": "Remera IT'S EASY AS",
         "precio": 1500,
-        "img": "img/remeras/remera9.jpg",
+        "img": "../img/remeras/remera9.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -75,7 +75,7 @@
         "id": 9,
         "nombre": "Remera CHRISTMAS",
         "precio": 1500,
-        "img": "img/remeras/remera10.jpg",
+        "img": "../img/remeras/remera10.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -83,7 +83,7 @@
         "id": 10,
         "nombre": "Remera CHRISTMAS",
         "precio": 1500,
-        "img": "img/remeras/remera11.jpg",
+        "img": "../img/remeras/remera11.jpg",
         "categoria" : "remera",
         "cantidad": 0
     },
@@ -91,7 +91,7 @@
         "id": 11,
         "nombre": "Jean CELESTE",
         "precio": 2000,
-        "img": "img/jeans/jean1.avif",
+        "img": "../img/jeans/jean1.avif",
         "categoria" : "jeans",
         "cantidad": 0
     },
@@ -99,7 +99,7 @@
         "id": 12,
         "nombre": "Jean AZUL",
         "precio": 2000,
-        "img": "img/jeans/jean2.avif",
+        "img": "../img/jeans/jean2.avif",
         "categoria" : "jeans",
         "cantidad": 0
     },
@@ -107,7 +107,7 @@
         "id": 13,
         "nombre": "Jean NEGRO",
         "precio": 2000,
-        "img": "img/jeans/jean3.avif",
+        "img": "../img/jeans/jean3.avif",
         "categoria" : "jeans",
         "cantidad": 0
     },
@@ -115,7 +115,7 @@
         "id": 14,
         "nombre": "Jean VERDE",
         "precio": 2000,
-        "img": "img/jeans/jean4.avif",
+        "img": "../img/jeans/jean4.avif",
         "categoria" : "jeans",
         "cantidad": 0
     },
@@ -123,7 +123,7 @@
         "id": 15,
         "nombre": "Jean MARRON",
         "precio": 2000,
-        "img": "img/jeans/jean5.avif",
+        "img": "../img/jeans/jean5.avif",
         "categoria" : "jeans",
         "cantidad": 0
     },
@@ -131,7 +131,7 @@
         "id": 16,
         "nombre": "Jean ROJO",
         "precio": 2000,
-        "img": "img/jeans/jean6.avif",
+        "img": "../img/jeans/jean6.avif",
         "categoria" : "jeans",
         "cantidad": 0
     },
@@ -139,7 +139,7 @@
         "id": 17,
         "nombre": "Jean AMARILLO",
         "precio": 2000,
-        "img": "img/jeans/jean7.avif",
+        "img": "../img/jeans/jean7.avif",
         "categoria" : "jeans",
         "cantidad": 0
     },
@@ -147,7 +147,7 @@
         "id": 18,
         "nombre": "Camisa RAYADA CELESTE",
         "precio": 1700,
-        "img": "img/camisas/camisa1.avif",
+        "img": "../img/camisas/camisa1.avif",
         "categoria" : "camisas",
         "cantidad": 0
     },
@@ -156,7 +156,7 @@
         "id": 19,
         "nombre": "Camisa CELESTE Y ROSA",
         "precio": 1700,
-        "img": "img/camisas/camisa2.avif",
+        "img": "../img/camisas/camisa2.avif",
         "categoria" : "camisas",
         "cantidad": 0
     },
@@ -165,7 +165,7 @@
         "id": 20,
         "nombre": "Camisa AZUL RAYADA",
         "precio": 1700,
-        "img": "img/camisas/camisa3.avif",
+        "img": "../img/camisas/camisa3.avif",
         "categoria" : "camisas",
         "cantidad": 0
     },
@@ -174,7 +174,7 @@
         "id": 21,
         "nombre": "Camisa VERDE RAYADA",
         "precio": 1700,
-        "img": "img/camisas/camisa4.avif",
+        "img": "../img/camisas/camisa4.avif",
         "categoria" : "camisas",
         "cantidad": 0
     },
@@ -183,7 +183,7 @@
         "id": 22,
         "nombre": "Camisa MORADA RAYADA",
         "precio": 1700,
-        "img": "img/camisas/camisa5.avif",
+        "img": "../img/camisas/camisa5.avif",
         "categoria" : "camisas",
         "cantidad": 0
     },
@@ -192,7 +192,7 @@
         "id": 23,
         "nombre": "Camisa BLANCA RAYADA",
         "precio": 1700,
-        "img": "img/camisas/camisa6.avif",
+        "img": "../img/camisas/camisa6.avif",
         "categoria" : "camisas",
         "cantidad": 0
     },
@@ -201,7 +201,7 @@
         "id": 24,
         "nombre": "Camisa BLANCA LISA",
         "precio": 1700,
-        "img": "img/camisas/camisa7.avif",
+        "img": "../img/camisas/camisa7.avif",
         "categoria" : "camisas",
         "cantidad": 0
     }
