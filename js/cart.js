@@ -34,7 +34,6 @@ function renderCart(cartProducts) {
 function clear() {
     clearButton.onclick = () =>{
         localStorage.clear();
-        cartContainer.innerHTML = "";
         cartProducts = [];
         calculoTotal();
     }
@@ -103,6 +102,9 @@ function btnFunciones() {
                 <input type="email" name="mail" id="mail" class="swal2-input"><br>
             `,
             focusConfirm: false,
+            showCloseButton: true,
+            closeButtonAriaLabel: "cerrar",
+
             preConfirm: () => {
               return [
                 document.getElementById("nombre").value,
@@ -111,14 +113,15 @@ function btnFunciones() {
               ];
             }
           });
+
+
           if (formValues) {
             Swal.fire({
             icon: "success",
-            title: `Gracias por tu compra ${document.getElementById("nombre").value}!`,
-            text: `Te llegara un correo a ${document.getElementById("mail").value} con las indicaciones para efectuar la compra`,
+            title: `Gracias por tu compra ${formValues[0]}!`,
+            text: `Te llegara un correo a ${formValues[2]} con las indicaciones para efectuar la compra`,
             });
             localStorage.clear();
-            cartContainer.innerHTML = "";
             cartProducts = [];
             calculoTotal();
           }

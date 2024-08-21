@@ -104,30 +104,39 @@ function addToCart() {
     
 }
 
+let categoriaElegida
 function categorySelector(){
     const categoriasCheck = document.querySelectorAll(".categoria-selector input");
     categoriasCheck.forEach(categoria => {
         categoria.onclick = e =>{
-            let categoriaElegida = (id) => {
-                switch (id) {
-                    case "checkRemeras":
-                        return "remeras"
-                    case "checkCamisas":
-                        return "camisas"
-                    case "checkJeans":
-                        return "jeans"
-                    default:
-                        break;
-            }}
-            if (categoria.checked) {
-                selectedCategory.push(categoriaElegida(e.currentTarget.id))
-            } else {
-                selectedCategory = selectedCategory.splice(selectedCategory.indexOf(categoriaElegida(e.currentTarget.id))-1, 1)
+
+            switch (e.currentTarget.id) {
+                case "checkRemeras":
+                    categoriaElegida = "remeras"
+                    break
+
+                case "checkCamisas":
+                    categoriaElegida = "camisas"
+                    break
+
+                case "checkJeans":
+                    categoriaElegida = "jeans"
+                    break
+
+                default:
+                    break;
+            }
+
+            if (categoria.checked == true) {
+                selectedCategory.push(categoriaElegida)
+            } else if (selectedCategory.length != 1){                
+                selectedCategory = selectedCategory.filter(categoria => categoria != categoriaElegida)
             }
             localStorage.setItem("selectedCategory", JSON.stringify(selectedCategory))
             renderCategory(selectedCategory)
             filtroYRender(datos)
         }
+        
     })
 }
 
@@ -167,5 +176,5 @@ function refreshCant(cart) {
 // INICIO
 
 renderCategory(selectedCategory)
-categorySelector()
 cargarProductos("../db/data-base.json")
+categorySelector()

@@ -146,6 +146,8 @@ aside{
     padding: 2rem;
     box-shadow:10px 10px 60px rgb(153, 153, 153);
     height: fit-content;
+    position: sticky;
+    top: 7rem;
 }
 
 #cuerpo label{
