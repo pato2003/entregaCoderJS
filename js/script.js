@@ -60,10 +60,7 @@ function addToCart() {
                         producto.cantidad++;
                         return producto;
                     }
-                    else{
-                        producto.cantidad++;
-                        return producto
-                    }
+                    return producto;
                 })
                 cart = listaProductos;
             }
@@ -162,12 +159,19 @@ function refreshCant(cart) {
     cart.forEach(producto => {
         const contenedorCantidad = document.getElementById(`cantContainer${producto.id}`);
         const contenedorBotones = document.getElementById(`btnContainer${producto.id}`);
-        if (producto.cantidad == 0) {
-            contenedorBotones.style.display = "none";
-        }
-        else{
-            contenedorBotones.style.display = "flex";
-            contenedorCantidad.innerText = `${producto.cantidad}`
+        try {
+            if (!articulos.some(articulo => articulo.id == producto.id)) {
+                throw new Error("El producto no esta mostrandose en este momento");
+            }
+            if (producto.cantidad == 0) {
+                contenedorBotones.style.display = "none";
+            }
+            else{
+                contenedorBotones.style.display = "flex";
+                contenedorCantidad.innerText = `${producto.cantidad}`
+            }  
+        } catch (error) {
+            console.log(error)
         }
     });
 }
