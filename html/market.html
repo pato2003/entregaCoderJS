@@ -13,22 +13,42 @@
 </head>
 <body>
     <header>
-        <h1><a href="#">Tienda Colegio Lorenzo Massa</a></h1>
+        <h1><a href="../index.html">Tienda Colegio Lorenzo Massa</a></h1>
         <nav>
             <ul class="nav">
-                <li class="nav-item"><a href="../index.html"><i class="bi bi-house-fill"></i> Inicio</a></li>
-                <li class="nav-item"><a href="./cart.html"><i class="bi bi-cart-fill"></i> Carrito</a></li>
+                <li class="nav-item"><a href="../index.html"><i class="bi bi-house"></i> Inicio</a></li>
+                <li class="nav-item"><a href="#"><i class="bi bi-shop"></i> Tienda</a></li>
+                <li class="nav-item"><a href="./cart.html"><i class="bi bi-cart"></i> Carrito</a></li>
             </ul>            
         </nav>
     </header>
-    <main class="container-fluid">
-        <section class="p-5 mt-5 col-10 mx-auto">
-            <h2 class="fs-1 text-center">Bienvenido, qué desea comprar?</h2>
-            <section class="d-flex flex-wrap justify-content-evenly" id="cards-container">
-    
+    <h2 class="fs-1 text-center mt-4">Tienda</h2>
+    <section id="cuerpo">
+        <aside class="tarjeta">
+            <h3>Categorías</h3>
+            <nav>
+                <article class="categoria-selector">
+                    <input type="checkbox" name="checkRemeras" id="checkRemeras">
+                    <label for="checkRemeras">Remeras</label><br>
+                </article>
+                <article class="categoria-selector">
+                    <input type="checkbox" name="checkCamisas" id="checkCamisas">
+                    <label for="checkCamisas">Camisas</label><br>
+                </article>
+                <article class="categoria-selector">
+                    <input type="checkbox" name="checkJeans" id="checkJeans">
+                    <label for="checkJeans">Jeans</label><br>
+                </article>
+            </nav>
+        </aside>
+        <main class="container-fluid">
+            <section class="mt-5 mx-auto">
+                <section class="d-flex flex-wrap justify-content-evenly" id="cards-container">
+        
+                </section>
             </section>
-        </section>
-    </main>
+        </main>
+    </section>
     <footer>
         <p></p>
     </footer>

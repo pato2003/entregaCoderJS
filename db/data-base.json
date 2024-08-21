@@ -4,7 +4,7 @@
         "nombre": "Remera ALBANY NEW EAGLES",
         "precio": 1500,
         "img": "../img/remeras/remera1.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -12,7 +12,7 @@
         "nombre": "Remera ALBANY NEW EAGLES",
         "precio": 1500,
         "img": "../img/remeras/remera2.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -20,7 +20,7 @@
         "nombre": "Remera ALBANY NEW EAGLES",
         "precio": 1500,
         "img": "../img/remeras/remera3.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -28,7 +28,7 @@
         "nombre": "Remera FOYOP",
         "precio": 1500,
         "img": "../img/remeras/remera4.png",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -36,7 +36,7 @@
         "nombre": "Remera FOYOP",
         "precio": 1500,
         "img": "../img/remeras/remera5.JPG",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -44,7 +44,7 @@
         "nombre": "Remera FOYOP",
         "precio": 1500,
         "img": "../img/remeras/remera6.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -52,7 +52,7 @@
         "nombre": "Remera FOYOP",
         "precio": 1500,
         "img": "../img/remeras/remera7.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -60,7 +60,7 @@
         "nombre": "Remera IT'S EASY AS",
         "precio": 1500,
         "img": "../img/remeras/remera8.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -68,7 +68,7 @@
         "nombre": "Remera IT'S EASY AS",
         "precio": 1500,
         "img": "../img/remeras/remera9.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -76,7 +76,7 @@
         "nombre": "Remera CHRISTMAS",
         "precio": 1500,
         "img": "../img/remeras/remera10.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
@@ -84,7 +84,7 @@
         "nombre": "Remera CHRISTMAS",
         "precio": 1500,
         "img": "../img/remeras/remera11.jpg",
-        "categoria" : "remera",
+        "categoria" : "remeras",
         "cantidad": 0
     },
     {
