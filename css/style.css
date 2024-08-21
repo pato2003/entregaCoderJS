@@ -154,3 +154,31 @@ aside{
 #cuerpo input{
     transform: scale(1.5);
 }
+
+
+.producto-carrito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 0.1rem solid rgb(153, 153, 153);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    box-shadow:10px 10px 20px rgb(153, 153, 153);
+}
+
+.producto-carrito-imagen{
+    width: 9vw;
+    border-radius: 0.5rem;
+    margin-right: 3rem;
+
+}
+
+.producto-carrito-cuerpo{
+    width: 30vw;
+}
+.producto-carrito-acciones{
+    margin-right: 1rem;
+}

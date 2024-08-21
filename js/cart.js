@@ -13,19 +13,18 @@ function renderCart(cartProducts) {
     if(cartProducts){
         cartContainer.innerHTML="";
         for (const producto of cartProducts){
-            const article = document.createElement("article");
-            article.className = "m-2 border border-secondary-subtle w-100 d-flex flex-row align-items-center";
-            article.innerHTML = `<img src=${"../"+producto.img} alt="..." class ="m-1" style = "height: 7rem">
-            <section class = "ms-3">
-            <h4 class="fs-3">${producto.nombre}     -    $${producto.precio}</h4>
-            <p> Cantidad: ${producto.cantidad}</p>
-            </section>
-            <section class = "ms-auto me-5" id = "${producto.id}">
-                <button class ="btn btn-outline-secondary fs-5 fw-bold btnResta" style = "width: 2.5rem;">- </button>
-                <button class ="btn btn-success fs-5 me-4 fw-bold btnSuma" style = "width: 2.5rem;">+ </button>
-                <button class ="btn btn-outline-danger fs-5 fw-bold btnDelete" style = "width: 2.5rem;">x </button>
-            </section>`;
-            article.style.width = "35%"
+            const article = document.createElement("section");
+            article.className = "producto-carrito";
+            article.innerHTML = `<img src=${"../"+producto.img} alt="..." class ="m-1 producto-carrito-imagen">
+                                <section class = "producto-carrito-cuerpo">
+                                <h4 class="fs-3">${producto.nombre}     -    $${producto.precio}</h4>
+                                <p> Cantidad: ${producto.cantidad}</p>
+                                </section>
+                                <section class = "producto-carrito-acciones" id = "${producto.id}">
+                                    <button class ="btn btn-outline-secondary fs-5 fw-bold btnResta" style = "width: 2.5rem;">- </button>
+                                    <button class ="btn btn-success fs-5 me-4 fw-bold btnSuma" style = "width: 2.5rem;">+ </button>
+                                    <button class ="btn btn-outline-danger fs-5 fw-bold btnDelete"><i class="bi bi-trash"></i></button>
+                                </section>`;
             cartContainer.appendChild(article);
         }
     }
